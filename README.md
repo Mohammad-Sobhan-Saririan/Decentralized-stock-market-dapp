@@ -2,7 +2,7 @@
 
 This is a full-stack decentralized application that simulates a stock market on the Ethereum blockchain (Sepolia Testnet). It features a Solidity smart contract backend with Chainlink oracle integration and a responsive React frontend.
 
-![App Screenshot](./ui/public/screenshot.png) 
+![App Screenshot](./UI/public/screenshot.png) 
 *(Suggestion: Take a screenshot of your running dApp, save it as `screenshot.png` inside your `project/ui/public/` folder, and it will appear here.)*
 
 ---
@@ -34,7 +34,7 @@ This is a full-stack decentralized application that simulates a stock market on 
 1.  **Clone the repository:**
     ```sh
     git clone [Your Repository URL Here]
-    cd decentralized-stock-market
+    cd Decentralized-stock-market
     ```
 
 2.  **Install frontend dependencies:**
