@@ -1,0 +1,275 @@
+/* src/App.css */
+:root {
+  --background-color: #0c0a1a;
+  --card-background: rgba(43, 43, 80, 0.4);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+  --text-color: #e0e0e0;
+  --header-text-color: #fff;
+  --primary-color-start: #2a0a52;
+  --primary-color-end: #5c2c9d;
+  --hover-shadow-color: #c38fff;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--header-text-color);
+  text-shadow: 0 0 10px #fff, 0 0 20px #00aaff;
+  margin: 0;
+}
+
+.wallet-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.wallet-info strong {
+  color: #33ccff;
+}
+
+.glass-card {
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: var(--glass-border);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card h2 {
+  margin-top: 0;
+  color: var(--header-text-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+button {
+  background: linear-gradient(45deg, var(--primary-color-start), var(--primary-color-end));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover:not(:disabled) {
+  box-shadow: 0 0 15px var(--hover-shadow-color);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input {
+  padding: 12px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+thead {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0 0 0px;
+  font-size: 1rem;
+  vertical-align: middle;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.copy-button:hover {
+  opacity: 1;
+  transform: none;
+  box-shadow: none;
+}
+
+[title] {
+  text-decoration: underline dotted rgba(255, 255, 255, 0.5);
+  cursor: help;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(50, 50, 90, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.trade-input {
+  width: calc(100% - 24px);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .outdated-price {
+    color: #ff9999;
+    font-style: italic;
+    text-decoration: line-through;
+  }
+
+  .outdated-price::after {
+    content: " ⚠️";
+  }
+
+
+  td:nth-of-type(1):before {
+    content: "Symbol";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Price (USD)";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Your Balance";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Token Address";
+  }
+
+  td:nth-of-type(5):before {
+    content: "Last Updated";
+  }
+
+  td:nth-of-type(6):before {
+    content: "Buy";
+  }
+
+  td:nth-of-type(7):before {
+    content: "Sell";
+  }
+
+  td:nth-of-type(8):before {
+    content: "Admin Actions";
+  }
+}
