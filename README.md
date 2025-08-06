@@ -4,7 +4,6 @@
 Welcome to our **Decentralized Stock Market**, a full-stack decentralized application (dApp) that brings the thrill of stock trading to the Ethereum blockchain! Deployed on the Sepolia testnet, this project combines robust Solidity smart contracts, real-time price feeds via Chainlink oracles, and a sleek, user-friendly React frontend. Whether you're a blockchain developer or just curious, this dApp showcases how to bridge real-world data with on-chain logic in a secure and interactive way.
 
 ![App Screenshot](./UI/public/screenshot.png)  
-*Pro tip: Take a screenshot of your running dApp, save it as `screenshot.png` in `ui/public/`, and it’ll shine right here!*
 
 ## 🌟 What Makes This Project Awesome?
 
@@ -106,7 +105,7 @@ Ready to explore the stock market on-chain? Follow these steps to run the dApp l
 
 3. **Configure the Contract Address:**
    - Open `ui/src/App.jsx`.
-   - Replace the `contractAddress` with your deployed `StockMarket.sol` address (e.g., `0x27c8C94374C8B64D25AC1F1369e5b472F4fD6981`).
+   - Replace the `contractAddress` with your deployed `StockMarket.sol` address (e.g., `0x27c8C94374C8B64D25AC1F1369e5b472F4fD6981`, `my stock market(:` ).
 
 4. **Run the Frontend:**
    ```sh
